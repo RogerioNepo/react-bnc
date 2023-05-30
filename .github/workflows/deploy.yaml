@@ -66,10 +66,10 @@ jobs:
       steps:
         - name: Activating release
           uses: appleboy/ssh-action@master
-        with:          
-          host: ${{ secrets.DO_HOST }}
-          username: ${{ secrets.DO_USER }}
-          key: ${{ secrets.DO_KEY }}
-          port: 22
-          script: |
-            ln -s -n -f /home/project/releases/${{ github.sha }}/build /var/www/html/current
+          with:          
+            host: ${{ secrets.DO_HOST }}
+            username: ${{ secrets.DO_USER }}
+            key: ${{ secrets.DO_KEY }}
+            port: 22
+            script: |
+              ln -s -n -f /home/project/releases/${{ github.sha }}/build /var/www/html/current
